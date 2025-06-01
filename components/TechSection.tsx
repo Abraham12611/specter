@@ -103,7 +103,8 @@ const TechSection = () => {
         // Hover effect for the header text
         const handleMouseEnter = () => {
           gsap.to(split.words, {
-            color: '#ffffff', // Highlight color on hover
+            color: '#B8FF35',
+            textShadow: '0 0 10px rgba(184, 255, 53, 0.5)',
             duration: 0.3,
             stagger: 0.05,
             overwrite: true,
@@ -112,7 +113,8 @@ const TechSection = () => {
 
         const handleMouseLeave = () => {
           gsap.to(split.words, {
-            color: '#E2E6EA', // Original color on hover out
+            color: '#E2E6EA',
+            textShadow: 'none',
             duration: 0.3,
             stagger: 0.05,
             overwrite: true,
@@ -160,9 +162,18 @@ const TechSection = () => {
       </div>
 
       {/* Section Header */}
-      <div className="absolute top-8 left-8 z-10 text-[#E2E6EA]">
-        <h2 ref={headerRef} className="text-6xl md:text-7xl font-black uppercase tracking-tight leading-none">
-          <span>Advanced</span> <span className="text-white">Engineering</span>
+      <div className="absolute top-8 left-8 z-10">
+        <h2 
+          ref={headerRef} 
+          className="text-6xl md:text-7xl font-black uppercase tracking-tight leading-none"
+          style={{
+            background: 'linear-gradient(180deg, #E2E6EA 0%, #B8FF35 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            textShadow: '0 0 20px rgba(184, 255, 53, 0.3)'
+          }}
+        >
+          <span>Advanced</span>{" "}<span>Engineering</span>
         </h2>
       </div>
 
