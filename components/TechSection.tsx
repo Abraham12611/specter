@@ -162,15 +162,16 @@ const TechSection = () => {
       </div>
 
       {/* Section Header */}
-      <div className="absolute top-8 left-8 z-10">
+      <div className="absolute top-8 left-8 z-50">
         <h2 
           ref={headerRef} 
           className="text-6xl md:text-7xl font-black uppercase tracking-tight leading-none"
           style={{
-            background: 'linear-gradient(180deg, #E2E6EA 0%, #B8FF35 100%)',
+            background: 'linear-gradient(180deg, #FFFFFF 0%, #B8FF35 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
-            textShadow: '0 0 20px rgba(184, 255, 53, 0.3)'
+            textShadow: '0 2px 30px rgba(184, 255, 53, 0.5)',
+            position: 'relative'
           }}
         >
           <span>Advanced</span>{" "}<span>Engineering</span>
