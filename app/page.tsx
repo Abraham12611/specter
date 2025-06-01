@@ -10,6 +10,7 @@ import HeroSection from "@/components/HeroSection";
 import TechSection from "@/components/TechSection";
 import GallerySection from "@/components/GallerySection";
 import SpecsSection from "@/components/SpecsSection";
+import FooterSection from "@/components/FooterSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <TechSection />
       <GallerySection />
       <SpecsSection />
+      <FooterSection />
     </main>
   );
 }

@@ -143,7 +143,7 @@ const SpecsSection = () => {
       style={{
         backgroundImage: 'url("/assets/half-car-photo-sketch.png")',
         backgroundPosition: 'center',
-        backgroundSize: 'contain',
+        backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
       }}
     >
@@ -185,12 +185,18 @@ const SpecsSection = () => {
                   item.isOpen ? 'max-h-[500px]' : 'max-h-0'
                 }`}
               >
-                <div className="py-4 px-6 bg-[rgba(184,255,53,0.05)]">
-                  {item.content.map((line, i) => (
-                    <p key={i} className="text-[15px] text-[#C0C5D1] mb-2 last:mb-0">
-                      {line}
-                    </p>
-                  ))}
+                <div className="py-4 px-6 bg-[#23282F] rounded-b-lg">
+                  {item.content.map((line, i) => {
+                    const [before, after] = line.split(/:(.+)/); // split at first colon
+                    return (
+                      <p key={i} className="text-[15px] mb-2 last:mb-0">
+                        <span className="font-semibold text-[#B8FF35]">{before}{after !== undefined && ':'}</span>
+                        {after !== undefined && (
+                          <span className="text-[#C0C5D1]">{after}</span>
+                        )}
+                      </p>
+                    );
+                  })}
                 </div>
               </div>
             </div>

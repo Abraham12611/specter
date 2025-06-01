@@ -74,6 +74,18 @@ const GallerySection = () => {
       id="gallery-section"
       className="relative w-full h-screen bg-[#0B0C0D] overflow-hidden"
     >
+      {/* Section Header */}
+      <div className="absolute top-8 left-8 z-20">
+        <h2
+          className="text-5xl md:text-6xl font-black uppercase tracking-tight leading-none bg-gradient-to-r from-white via-[#B8FF35] to-[#B8FF35] bg-clip-text text-transparent drop-shadow-[0_2px_30px_rgba(184,255,53,0.5)]"
+          style={{
+            WebkitTextStroke: '1px #B8FF35',
+            filter: 'drop-shadow(0 2px 30px rgba(184,255,53,0.2))',
+          }}
+        >
+          CAR GALLERY
+        </h2>
+      </div>
       {/* Big Screen Display */}
       <div className="absolute inset-0 w-full h-full z-0">
         {GALLERY_IMAGES.map((src, index) => (
